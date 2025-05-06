@@ -1,3 +1,5 @@
+
+// for all best avg and worst->o(nlogn)
 import java.util.Scanner;
 
 class MergeSort {
@@ -46,13 +48,13 @@ class MergeSort {
       int mid = (start + end) / 2;
 
       // Sort the first half: from start to mid
-      divide(array, start, mid); //left
+      divide(array, start, mid); // left
 
       // Sort the second half: from mid+1 to end
-      divide(array, mid + 1, end);//right
+      divide(array, mid + 1, end);// right
 
       // Merge the sorted halves
-      merge(array, start, mid, end);//call merge
+      merge(array, start, mid, end);// call merge
     }
   }
 
@@ -62,7 +64,6 @@ class MergeSort {
     }
     System.out.println();
   }
-  
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
@@ -77,8 +78,8 @@ class MergeSort {
     }
 
     MergeSort sorter = new MergeSort();
-    sorter.divide(array, 0, array.length - 1);//question is that why merge not call
-    //because in divide function we already call merge f
+    sorter.divide(array, 0, array.length - 1);// question is that why merge not call
+    // because in divide function we already call merge f
 
     System.out.println("Sorted array:");
     printArray(array);
@@ -86,3 +87,4 @@ class MergeSort {
     scanner.close();
   }
 }
+
